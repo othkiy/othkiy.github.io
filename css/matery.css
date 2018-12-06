@@ -642,7 +642,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #6A93B0;
+    color: #fff;
     text-decoration: underline;
 }
 
