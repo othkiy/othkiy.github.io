@@ -5,13 +5,18 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="oThkiY">
-    <meta name="description" content="
-在虚拟机(Virtual Box)中安装ArchLinux
-title: tagsdate:type: “Linux” “mooc” “basic”layout: “tags”
+    <meta name="keywords" content="在虚拟机(Virtual Box)中安装ArchLinux, oThkiY">
+    <meta name="description" content="在Virtual Box下安装ArchLinux的简单步骤
+
+参考资料
+ArchWiki
+
+bilibli视屏教程
+
+国内高校开源镜像站。（清华）
 
 
-title: categoriesdate:type: ">
+写在前面BIOS的两种形式  BIOS包含UEFI和legacy（传统）两种启动模式，U">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +24,7 @@ title: categoriesdate:type: ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>oThkiY</title>
+    <title>在虚拟机(Virtual Box)中安装ArchLinux | oThkiY</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -192,13 +197,13 @@ title: categoriesdate:type: ">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/source/images/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        在虚拟机(Virtual Box)中安装ArchLinux
                     </div>
                 </div>
             </div>
@@ -216,7 +221,32 @@ title: categoriesdate:type: ">
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
+                <a href="/tags/Mooc/" target="_blank">
+                    <span class="chip bg-color">Mooc</span>
+                </a>
+                
+                <a href="/tags/Basic/" target="_blank">
+                    <span class="chip bg-color">Basic</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Linux/" class="post-category" target="_blank">
+                        Linux
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
@@ -227,14 +257,9 @@ title: categoriesdate:type: ">
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="在虚拟机-Virtual-Box-中安装ArchLinux"><a href="#在虚拟机-Virtual-Box-中安装ArchLinux" class="headerlink" title="在虚拟机(Virtual Box)中安装ArchLinux"></a>在虚拟机(Virtual Box)中安装ArchLinux</h2><hr>
-<p>title: tags<br>date:<br>type: “Linux” “mooc” “basic”<br>layout: “tags”</p>
+                <p>在Virtual Box下安装ArchLinux的简单步骤</p>
 <hr>
-<hr>
-<p>title: categories<br>date:<br>type: “Linux”<br>layout: “categories”</p>
-<hr>
-<h1 id="在虚拟机-Virtual-Box-中安装ArchLinux-1"><a href="#在虚拟机-Virtual-Box-中安装ArchLinux-1" class="headerlink" title="在虚拟机(Virtual Box)中安装ArchLinux"></a>在虚拟机(Virtual Box)中安装ArchLinux</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
 <li><p><a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank" rel="noopener">ArchWiki</a></p>
 </li>
 <li><p><a href="https://www.bilibili.com/video/av17575653?t=1239" target="_blank" rel="noopener">bilibli视屏教程</a></p>
@@ -242,7 +267,7 @@ title: categoriesdate:type: ">
 <li><p>国内高校开源镜像站。（<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华</a>）</p>
 </li>
 </ol>
-<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><h4 id="BIOS的两种形式"><a href="#BIOS的两种形式" class="headerlink" title="BIOS的两种形式"></a>BIOS的两种形式</h4><p>  <strong>BIOS包含UEFI和legacy（传统）两种启动模式</strong>，<strong>UEFI</strong>全称“统一的可扩展固件接口”(Unified Extensible Firmware Interface)， 是一种详细描述类型接口的标准。这种接口用于操作系统自动从预启动的操作环境，加载到一种操作系统上。UEFI方式减少了BIOS的自检过程，因此能够缩短开机时间，UEFI只支持64为系统且磁盘分区必须为gpt模式。如果你的PC在UEFI启动模式下预装了Win10，你会发现有两个很小的隐藏分区。一个叫<strong>ESP</strong>(EFI系统分区)，另一个<strong>MSR</strong>(Microsoft保留分区，通常为128MB)，MSR是windows要求的。ESP对UEFI启动模式很重要，UEFI的引导程序是以后缀名为.efi的文件存放在ESP分区中的，ESP分区采用fat32文件系统。此外，可能还存在一个小分区叫<strong>WinRETools</strong>，这个是win10的恢复分区</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="BIOS的两种形式"><a href="#BIOS的两种形式" class="headerlink" title="BIOS的两种形式"></a>BIOS的两种形式</h3><p>  <strong>BIOS包含UEFI和legacy（传统）两种启动模式</strong>，<strong>UEFI</strong>全称“统一的可扩展固件接口”(Unified Extensible Firmware Interface)， 是一种详细描述类型接口的标准。这种接口用于操作系统自动从预启动的操作环境，加载到一种操作系统上。UEFI方式减少了BIOS的自检过程，因此能够缩短开机时间，UEFI只支持64为系统且磁盘分区必须为gpt模式。如果你的PC在UEFI启动模式下预装了Win10，你会发现有两个很小的隐藏分区。一个叫<strong>ESP</strong>(EFI系统分区)，另一个<strong>MSR</strong>(Microsoft保留分区，通常为128MB)，MSR是windows要求的。ESP对UEFI启动模式很重要，UEFI的引导程序是以后缀名为.efi的文件存放在ESP分区中的，ESP分区采用fat32文件系统。此外，可能还存在一个小分区叫<strong>WinRETools</strong>，这个是win10的恢复分区</p>
 <h4 id="CSM"><a href="#CSM" class="headerlink" title="CSM"></a>CSM</h4><p>  CSM是一个兼容支持模块，可以让新的UEFI BIOS兼容老的legacy+MBR启动模式。</p>
 <h4 id="GPT"><a href="#GPT" class="headerlink" title="GPT"></a>GPT</h4><p>  GPT是一种<strong>新型磁盘模式</strong>，与我们常用的MBR磁盘相比更稳定，自纠错能力更强，一块磁盘上主分区数量不受限制，支持大于2T的总容量及大于2T的分区，并且几乎没有上限，最大支持到128个分区，分区大小支持到256TB。</p>
 <h4 id="分区模式"><a href="#分区模式" class="headerlink" title="分区模式"></a>分区模式</h4><p><strong>GPT</strong></p>
@@ -260,7 +285,6 @@ title: categoriesdate:type: ">
 </code></pre><h4 id="3-使用对新人友好的cfdisk进行分区"><a href="#3-使用对新人友好的cfdisk进行分区" class="headerlink" title="3. 使用对新人友好的cfdisk进行分区"></a>3. 使用对新人友好的cfdisk进行分区</h4><p>选定gpt 在free space下新建文件</p>
 <p>设置大小后</p>
 <pre><code>ESC
-
 :wq(write quite)
 </code></pre><p>查看分区文件</p>
 <pre><code>lsblk
@@ -281,9 +305,7 @@ title: categoriesdate:type: ">
 <p>mkfs.vfat /dec/xxx</p>
 </li>
 </ol>
-<h4 id="5-设置镜像网站来加快下载速度"><a href="#5-设置镜像网站来加快下载速度" class="headerlink" title="5. 设置镜像网站来加快下载速度"></a>5. 设置镜像网站来加快下载速度</h4><p>修改下载网站首选项<br>​    vim /etc/pacman.d/mirrorlist<br>或</p>
-<pre><code>nano /etc/pacman.d/mirrorlist
-</code></pre><p>若此目录下无该文件则两个命令都会<strong>自动创建</strong></p>
+<h4 id="5-设置镜像网站来加快下载速度"><a href="#5-设置镜像网站来加快下载速度" class="headerlink" title="5. 设置镜像网站来加快下载速度"></a>5. 设置镜像网站来加快下载速度</h4><p>修改下载网站首选项<br>​        vim /etc/pacman.d/mirrorlist<br>​    或<br>​        nano /etc/pacman.d/mirrorlist<br>若此目录下无该文件则两个命令都会<strong>自动创建</strong></p>
 <p>将选定的地址按 ‘ 2 ’ + ‘ dd ’ 剪切两行</p>
 <p>再在最开始的地方按 ‘ p ’ 粘贴将此地址作为下载首选项</p>
 <p>vim下按’ESC’后输入<br>​    :wq<br>nano则根据<strong>屏幕下方提示</strong></p>
@@ -296,10 +318,9 @@ title: categoriesdate:type: ">
 </code></pre><h4 id="10-设置时区"><a href="#10-设置时区" class="headerlink" title="10. 设置时区"></a>10. 设置时区</h4><pre><code>ln -sf/usr/share/zoneinfo/Regin/City/etc/localtime
 ln -sf/usr/share/zoneinfo/Asia/Shanghai /etc/localtime(中国大陆使用)
 </code></pre><h5 id="设置硬件时间"><a href="#设置硬件时间" class="headerlink" title="设置硬件时间"></a>设置硬件时间</h5><pre><code>hwclock -–systohc
-</code></pre><h4 id="11-设置软件使用语言"><a href="#11-设置软件使用语言" class="headerlink" title="11. 设置软件使用语言"></a>11. 设置软件使用语言</h4><h5 id="安装所需文件"><a href="#安装所需文件" class="headerlink" title="安装所需文件"></a>安装所需文件</h5><pre><code>pacman -S vim
-</code></pre><h5 id="编辑文本"><a href="#编辑文本" class="headerlink" title="编辑文本"></a>编辑文本</h5><pre><code>vim /etc/locale.gen
-</code></pre><h5 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h5><pre><code>esc 
-
+</code></pre><h4 id="11-设置软件使用语言"><a href="#11-设置软件使用语言" class="headerlink" title="11. 设置软件使用语言"></a>11. 设置软件使用语言</h4><h5 id="1-安装所需文件"><a href="#1-安装所需文件" class="headerlink" title="1. 安装所需文件"></a>1. 安装所需文件</h5><pre><code>pacman -S vim
+</code></pre><h5 id="2-编辑文本"><a href="#2-编辑文本" class="headerlink" title="2. 编辑文本"></a>2. 编辑文本</h5><pre><code>vim /etc/locale.gen
+</code></pre><h5 id="3-查找"><a href="#3-查找" class="headerlink" title="3. 查找"></a>3. 查找</h5><pre><code>esc 
 /zh_CN
 </code></pre><p>找到需要的语言’x’删除其前面的#”后</p>
 <pre><code>:wq
@@ -340,7 +361,7 @@ reboot
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://othkiy.github.io" class="b-link-green">oThkiY</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/06/在虚拟机中安装ArchLinux/" class="b-link-green"></a>
+                    <a href="/2018/12/06/在虚拟机中安装ArchLinux/" class="b-link-green">在虚拟机(Virtual Box)中安装ArchLinux</a>
                 </p>
             </div>
         </div>
@@ -367,62 +388,116 @@ reboot
                 <a href="/2018/12/06/在虚拟机中安装ArchLinux/">
                     <div class="card-image">
                         
+                        <img src="/source/images/0.jpg" class="responsive-img" alt="在虚拟机(Virtual Box)中安装ArchLinux">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">在虚拟机(Virtual Box)中安装ArchLinux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">
-在虚拟机(Virtual Box)中安装ArchLinux
-title: tagsdate:type: “Linux” “mooc” “basic”layout: “tags”
+                    <div class="summary">在Virtual Box下安装ArchLinux的简单步骤
+
+参考资料
+ArchWiki
+
+bilibli视屏教程
+
+国内高校开源镜像站。（清华）
 
 
-title: categoriesdate:type: </div>
+写在前面BIOS的两种形式  BIOS包含UEFI和legacy（传统）两种启动模式，U</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            othkiy
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Mooc/" target="_blank">
+                        <span class="chip bg-color">Mooc</span>
+                    </a>
+                    
+                    <a href="/tags/Basic/" target="_blank">
+                        <span class="chip bg-color">Basic</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="article-badge right-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/03/hello-world/">
+                <a href="/2018/12/06/在虚拟机中安装ArchLinux/">
                     <div class="card-image">
                         
+                        <img src="/source/images/0.jpg" class="responsive-img" alt="在虚拟机(Virtual Box)中安装ArchLinux">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">在虚拟机(Virtual Box)中安装ArchLinux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">在Virtual Box下安装ArchLinux的简单步骤
+
+参考资料
+ArchWiki
+
+bilibli视屏教程
+
+国内高校开源镜像站。（清华）
+
+
+写在前面BIOS的两种形式  BIOS包含UEFI和legacy（传统）两种启动模式，U</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            othkiy
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Mooc/" target="_blank">
+                        <span class="chip bg-color">Mooc</span>
+                    </a>
+                    
+                    <a href="/tags/Basic/" target="_blank">
+                        <span class="chip bg-color">Basic</span>
+                    </a>
+                    
                 </div>
                 
             </div>
