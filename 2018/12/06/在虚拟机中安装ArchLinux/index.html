@@ -297,7 +297,7 @@ bilibli视屏教程
 <pre class=" language-bash"><code class="language-bash">lsblk
 </code></pre>
 <p>查看硬盘及分区信息</p>
-<pre class=" language-bash"><code class="language-bash">    <span class="token function">fdisk</span> -l
+<pre class=" language-bash"><code class="language-bash"><span class="token function">fdisk</span> -l
 </code></pre>
 <h4 id="4-对分区进行格式化"><a href="#4-对分区进行格式化" class="headerlink" title="4. 对分区进行格式化"></a>4. 对分区进行格式化</h4><ol>
 <li>文件<pre class=" language-bash"><code class="language-bash">mkfs.ext4 /dev/xxx
@@ -342,29 +342,29 @@ bilibli视屏教程
 </code></pre>
 <h4 id="9-打开在之前在mnt目录下下载的鑫系统（用户名，主机名改变）"><a href="#9-打开在之前在mnt目录下下载的鑫系统（用户名，主机名改变）" class="headerlink" title="9. 打开在之前在mnt目录下下载的鑫系统（用户名，主机名改变）"></a>9. 打开在之前在mnt目录下下载的鑫系统（用户名，主机名改变）</h4><pre class=" language-bash"><code class="language-bash">ach-chroot /mnt
 </code></pre>
-<h4 id="10-设置时区"><a href="#10-设置时区" class="headerlink" title="10. 设置时区"></a>10. 设置时区</h4><pre class=" language-bash"><code class="language-bash">    <span class="token function">ln</span> -sf/usr/share/zoneinfo/Regin/City/etc/localtime
-    <span class="token function">ln</span> -sf/usr/share/zoneinfo/Asia/Shanghai /etc/localtime<span class="token punctuation">(</span>中国大陆使用<span class="token punctuation">)</span>
+<h4 id="10-设置时区"><a href="#10-设置时区" class="headerlink" title="10. 设置时区"></a>10. 设置时区</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">ln</span> -sf/usr/share/zoneinfo/Regin/City/etc/localtime
+<span class="token function">ln</span> -sf/usr/share/zoneinfo/Asia/Shanghai /etc/localtime<span class="token punctuation">(</span>中国大陆使用<span class="token punctuation">)</span>
 </code></pre>
-<h5 id="设置硬件时间"><a href="#设置硬件时间" class="headerlink" title="设置硬件时间"></a>设置硬件时间</h5><pre class=" language-bash"><code class="language-bash">    hwclock -–systohc
+<h5 id="设置硬件时间"><a href="#设置硬件时间" class="headerlink" title="设置硬件时间"></a>设置硬件时间</h5><pre class=" language-bash"><code class="language-bash">hwclock -–systohc
 </code></pre>
-<h4 id="11-设置软件使用语言"><a href="#11-设置软件使用语言" class="headerlink" title="11. 设置软件使用语言"></a>11. 设置软件使用语言</h4><h5 id="1-安装所需文件"><a href="#1-安装所需文件" class="headerlink" title="1. 安装所需文件"></a>1. 安装所需文件</h5><pre class=" language-bash"><code class="language-bash">    pacman -S vim
+<h4 id="11-设置软件使用语言"><a href="#11-设置软件使用语言" class="headerlink" title="11. 设置软件使用语言"></a>11. 设置软件使用语言</h4><h5 id="1-安装所需文件"><a href="#1-安装所需文件" class="headerlink" title="1. 安装所需文件"></a>1. 安装所需文件</h5><pre class=" language-bash"><code class="language-bash">pacman -S vim
 </code></pre>
-<h5 id="2-编辑文本"><a href="#2-编辑文本" class="headerlink" title="2. 编辑文本"></a>2. 编辑文本</h5><pre class=" language-bash"><code class="language-bash">    vim /etc/locale.gen
+<h5 id="2-编辑文本"><a href="#2-编辑文本" class="headerlink" title="2. 编辑文本"></a>2. 编辑文本</h5><pre class=" language-bash"><code class="language-bash">vim /etc/locale.gen
 </code></pre>
-<h5 id="3-查找"><a href="#3-查找" class="headerlink" title="3. 查找"></a>3. 查找</h5><pre class=" language-bash"><code class="language-bash">    esc 
-    /zh_CN
+<h5 id="3-查找"><a href="#3-查找" class="headerlink" title="3. 查找"></a>3. 查找</h5><pre class=" language-bash"><code class="language-bash">esc 
+/zh_CN
 </code></pre>
 <p>找到需要的语言’x’删除其前面的#”后</p>
-<pre class=" language-bash"><code class="language-bash">    :wq
+<pre class=" language-bash"><code class="language-bash">:wq
 </code></pre>
 <p>保存退出</p>
-<h5 id="使用刚才编辑的文件"><a href="#使用刚才编辑的文件" class="headerlink" title="使用刚才编辑的文件"></a>使用刚才编辑的文件</h5><pre class=" language-bash"><code class="language-bash">    locale-gen
+<h5 id="使用刚才编辑的文件"><a href="#使用刚才编辑的文件" class="headerlink" title="使用刚才编辑的文件"></a>使用刚才编辑的文件</h5><pre class=" language-bash"><code class="language-bash">locale-gen
 </code></pre>
-<h4 id="12-设置变量"><a href="#12-设置变量" class="headerlink" title="12. 设置变量"></a>12. 设置变量</h4><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">echo</span> ‘LANG<span class="token operator">=</span>zh_CN.UTF-8’ <span class="token operator">></span> /etc/locale.conf
+<h4 id="12-设置变量"><a href="#12-设置变量" class="headerlink" title="12. 设置变量"></a>12. 设置变量</h4><pre class=" language-bash"><code class="language-bash"><span class="token keyword">echo</span> ‘LANG<span class="token operator">=</span>zh_CN.UTF-8’ <span class="token operator">></span> /etc/locale.conf
 </code></pre>
-<h5 id="在’locale-conf’中写入"><a href="#在’locale-conf’中写入" class="headerlink" title="在’locale.conf’中写入"></a>在’locale.conf’中写入</h5><pre class=" language-bash"><code class="language-bash">    LANG<span class="token operator">=</span>zh_CN.UTF-8
+<h5 id="在’locale-conf’中写入"><a href="#在’locale-conf’中写入" class="headerlink" title="在’locale.conf’中写入"></a>在’locale.conf’中写入</h5><pre class=" language-bash"><code class="language-bash">LANG<span class="token operator">=</span>zh_CN.UTF-8
 </code></pre>
-<h4 id="13-在chroot中安装网络驱动"><a href="#13-在chroot中安装网络驱动" class="headerlink" title="13. 在chroot中安装网络驱动"></a>13. 在chroot中安装网络驱动</h4><pre class=" language-bash"><code class="language-bash">    pacman -S iw wpa_supplicant dialog
+<h4 id="13-在chroot中安装网络驱动"><a href="#13-在chroot中安装网络驱动" class="headerlink" title="13. 在chroot中安装网络驱动"></a>13. 在chroot中安装网络驱动</h4><pre class=" language-bash"><code class="language-bash">pacman -S iw wpa_supplicant dialog
 </code></pre>
 <p><strong>使用ping查看网络</strong></p>
 <h4 id="13-设置chroot密码"><a href="#13-设置chroot密码" class="headerlink" title="13. 设置chroot密码"></a>13. 设置chroot密码</h4><pre class=" language-bash"><code class="language-bash">passwr xxxxx
@@ -372,12 +372,12 @@ bilibli视屏教程
 <p>直接输入密码 <strong>密码已隐藏</strong></p>
 <h4 id="14-因特尔cpu安装支持程序"><a href="#14-因特尔cpu安装支持程序" class="headerlink" title="14. 因特尔cpu安装支持程序"></a>14. 因特尔cpu安装支持程序</h4><pre class=" language-bash"><code class="language-bash">$ pacman -S intel-ucode
 </code></pre>
-<h4 id="15-安装引导加载程序"><a href="#15-安装引导加载程序" class="headerlink" title="15. 安装引导加载程序"></a>15. 安装引导加载程序</h4><pre class=" language-bash"><code class="language-bash">    pacman -S grub <span class="token punctuation">(</span>efibootmgr<span class="token punctuation">)</span>    
-    grub-install –target<span class="token operator">=</span>x86_64-efi –efi-drectory<span class="token operator">=</span>/xxx/xxx –bootloader-id<span class="token operator">=</span>grub
-    grub-mkconfig -o /boot/grub/grub.cfg
+<h4 id="15-安装引导加载程序"><a href="#15-安装引导加载程序" class="headerlink" title="15. 安装引导加载程序"></a>15. 安装引导加载程序</h4><pre class=" language-bash"><code class="language-bash">pacman -S grub <span class="token punctuation">(</span>efibootmgr<span class="token punctuation">)</span>    
+grub-install –target<span class="token operator">=</span>x86_64-efi –efi-drectory<span class="token operator">=</span>/xxx/xxx –bootloader-id<span class="token operator">=</span>grub
+grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
-<h4 id="16-配置完成退出chroot"><a href="#16-配置完成退出chroot" class="headerlink" title="16.配置完成退出chroot"></a>16.配置完成退出chroot</h4><pre class=" language-bash"><code class="language-bash">    <span class="token keyword">exit</span>
-    <span class="token function">reboot</span>
+<h4 id="16-配置完成退出chroot"><a href="#16-配置完成退出chroot" class="headerlink" title="16.配置完成退出chroot"></a>16.配置完成退出chroot</h4><pre class=" language-bash"><code class="language-bash"><span class="token keyword">exit</span>
+<span class="token function">reboot</span>
 </code></pre>
 
             </div>
