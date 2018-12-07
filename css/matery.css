@@ -976,7 +976,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip-active {
     color: #FFF !important;
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
+    background: linear-gradient(to bottom right, #3acfff 0%, #65dbf1 100%) !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
