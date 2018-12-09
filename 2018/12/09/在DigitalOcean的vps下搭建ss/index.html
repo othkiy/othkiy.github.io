@@ -271,15 +271,14 @@ ios Shadowrocket下">
 <li><a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v4.5.7/shadowsocks--universal-4.5.7.apk" target="_blank" rel="noopener">安卓版下载</a></li>
 </ul>
 <ol>
-<li><h2 id="连接到服务器"><a href="#连接到服务器" class="headerlink" title="连接到服务器"></a>连接到服务器</h2></li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> root@ip
+<li><h2 id="连接到服务器"><a href="#连接到服务器" class="headerlink" title="连接到服务器"></a>连接到服务器</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> root@ip
 </code></pre>
 <p>ip和要求输入的密码为在购买后DigitalOcean向<strong>账户邮箱中发送的邮件</strong>中<br>与输入后再次要求输入UNIX的密码相同<br>输入正确后会让用户修改密码</p>
-<ol start="2">
+</li>
 <li><h2 id="下载依赖组件"><a href="#下载依赖组件" class="headerlink" title="下载依赖组件"></a>下载依赖组件</h2></li>
-<li><p>Python</p>
-<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> m2crypto python-setuptools
+</ol>
+<ol>
+<li>Python<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> m2crypto python-setuptools
 </code></pre>
 </li>
 <li>pip<pre class=" language-bash"><code class="language-bash">easy_install pip
@@ -290,8 +289,6 @@ ios Shadowrocket下">
 </code></pre>
 </li>
 <li><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>修改shadowsocks的配置文件</p>
-</li>
-</ol>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">vi</span> /etc/shadowsocks.json
 </code></pre>
 <ul>
@@ -328,11 +325,11 @@ ios Shadowrocket下">
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<ol start="4">
-<li><h2 id="运行ss"><a href="#运行ss" class="headerlink" title="运行ss"></a>运行ss</h2></li>
-</ol>
 </li>
 </ul>
+</li>
+<li><h2 id="运行ss"><a href="#运行ss" class="headerlink" title="运行ss"></a>运行ss</h2></li>
+</ol>
 <ul>
 <li><h4 id="将ss设置为后台运行-每次开机需手动打开"><a href="#将ss设置为后台运行-每次开机需手动打开" class="headerlink" title="将ss设置为后台运行(每次开机需手动打开)"></a>将ss设置为后台运行(每次开机需手动打开)</h4><pre class=" language-bash"><code class="language-bash">sssever -c /etc/shadowsocks.json -d start  <span class="token comment" spellcheck="true">#后台运行</span>
 sssever -c /etc/shadowsocks.json -d stop   <span class="token comment" spellcheck="true">#后台停止</span>
@@ -352,8 +349,6 @@ ExecStart<span class="token operator">=</span>/usr/bin/ssserver -c /etc/shadowso
 WantedBy<span class="token operator">=</span>multi-user.target
 </code></pre>
 <p>保存退出<br>依次输入</p>
-</li>
-</ul>
 <pre class=" language-bash"><code class="language-bash">systemctl <span class="token function">enable</span> shadowsocks  <span class="token comment" spellcheck="true">#设置为机启动</span>
 systemctl start shadowsocks   <span class="token comment" spellcheck="true">#启动ss</span>
 systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查看状态</span>
@@ -362,7 +357,9 @@ systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查
 <h2 id="5-用BBR对ss服务器加速"><a href="#5-用BBR对ss服务器加速" class="headerlink" title="5. 用BBR对ss服务器加速"></a>5. 用BBR对ss服务器加速</h2><ol>
 <li><h5 id="正常BBR"><a href="#正常BBR" class="headerlink" title="正常BBR"></a>正常BBR</h5>安装wget基础包<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> wegt
 </code></pre>
-下载<ul>
+下载</li>
+</ol>
+</li>
 <li><strong>安装BBR</strong><pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 </code></pre>
 </li>
@@ -371,8 +368,6 @@ systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查
 </li>
 <li>启动安装</li>
 </ul>
-</li>
-</ol>
 <pre class=" language-bash"><code class="language-bash">./bbr.sh
 </code></pre>
 <ul>
