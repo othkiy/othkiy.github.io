@@ -48,7 +48,11 @@
       
         <tags>
             
-            <tag> -Mooc -Python -Flask </tag>
+            <tag> Mooc </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Flask </tag>
             
         </tags>
       
@@ -91,14 +95,14 @@
       
       <categories>
           
-          <category> learn </category>
+          <category> Learn </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> learn </tag>
+            <tag> Learn </tag>
             
         </tags>
       
