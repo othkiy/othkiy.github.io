@@ -354,15 +354,20 @@ systemctl start shadowsocks   <span class="token comment" spellcheck="true">#启
 systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查看状态</span>
 </code></pre>
 <p>此时ss服务器已经配置完成，可以使用</p>
-<h2 id="5-用BBR对ss服务器加速"><a href="#5-用BBR对ss服务器加速" class="headerlink" title="5. 用BBR对ss服务器加速"></a>5. 用BBR对ss服务器加速</h2><ol>
-<li><h5 id="正常BBR"><a href="#正常BBR" class="headerlink" title="正常BBR"></a>正常BBR</h5>安装wget基础包<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> wegt
+<h2 id="5-用BBR对ss服务器加速"><a href="#5-用BBR对ss服务器加速" class="headerlink" title="5. 用BBR对ss服务器加速"></a>5. 用BBR对ss服务器加速</h2></li>
+</ul>
+<h5 id="1-正常BBR"><a href="#1-正常BBR" class="headerlink" title="1.正常BBR"></a>1.正常BBR</h5><ul>
+<li>安装wget基础包</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> wegt
 </code></pre>
-下载</li>
-</ol>
-</li>
-<li><strong>安装BBR</strong><pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+<p>​            下载</p>
+<ul>
+<li><strong>安装BBR</strong></li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 </code></pre>
-</li>
+<ul>
 <li><strong>获取读写权限</strong><pre class=" language-bash"><code class="language-bash"><span class="token function">chmod</span> +x bbr.sh
 </code></pre>
 </li>
