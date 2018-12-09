@@ -12,14 +12,20 @@
       
       <categories>
           
-          <category> learn </category>
+          <category> Learn </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -vps -ss -Basic -learn </tag>
+            <tag> Basic </tag>
+            
+            <tag> vps </tag>
+            
+            <tag> ss </tag>
+            
+            <tag> Learn </tag>
             
         </tags>
       
