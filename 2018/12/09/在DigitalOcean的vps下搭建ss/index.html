@@ -360,7 +360,7 @@ systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查
 <h5 id="1-正常BBR"><a href="#1-正常BBR" class="headerlink" title="1.正常BBR"></a>1.正常BBR</h5><ul>
 <li>安装wget基础包</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> wegt
+<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> <span class="token function">wget</span>
 </code></pre>
 <p>​            下载</p>
 <ul>
@@ -380,11 +380,6 @@ systemctl status shadowsocks  <span class="token comment" spellcheck="true">#查
 <li>查看BBR状态</li>
 </ul>
 <pre class=" language-bash"><code class="language-bash">lsmod <span class="token operator">|</span> <span class="token function">grep</span> bbr
-</code></pre>
-<ul>
-<li>卸载BBR</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">./ovz-bbr-installel.sh.unstall
 </code></pre>
 <ol start="2">
 <li><h5 id="魔改BBR"><a href="#魔改BBR" class="headerlink" title="魔改BBR"></a>魔改BBR</h5><pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> -N --no-check-certificate <span class="token string">"https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"</span><span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x tcp.sh <span class="token operator">&amp;&amp;</span> ./tcp.sh
